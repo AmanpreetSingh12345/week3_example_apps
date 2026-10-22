@@ -1,0 +1,6 @@
+it looks similar to python flask implementation in terms of code logic ,visual ,etc. 
+but whats interesting is now on reload new game comes ,
+now opening another tab allows a different game ,
+each game still saved on server side ,but state is given from browser side which allows continuation of game 
+
+next we will be looking at vue implementation.
