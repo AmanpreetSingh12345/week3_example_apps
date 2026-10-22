@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tic-Tac-Toe - Game Over</title>
+    <style>
+        .b {
+            background-color: lightgrey;
+        }
+        .x, .o {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        {% if winner ==1 %}
+            Congratulations! X won!
+        {% elif winner == -1 %}
+            Congratulations! O won!
+        {% elif winner == 2 %}
+            It's a draw!
+        {% endif %}
+    </h1>
+
+    <table border="2px">
+        {% for i in range(9) %}
+            {% set r = i // 3 %}
+            {% set c = i % 3 %}
+            {% set e = board[i] %}
+            {% set spclass = ['o', 'b', 'x'][e + 1] %}
+
+            {% if c == 0 %}
+                <tr>
+            {% endif %}
+
+            <td class="{{ spclass }}">
+                <img src="/assets/{{ spclass }}.png">
+            </td>
+
+            {% if c == 2 %}
+                </tr>
+            {% endif %}
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/new">Play Again</a>
+</body>
+</html>
