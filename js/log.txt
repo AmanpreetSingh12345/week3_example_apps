@@ -1,6 +1,13 @@
 it looks similar to python flask implementation in terms of code logic ,visual ,etc. 
 but whats interesting is now on reload new game comes ,
 now opening another tab allows a different game ,
-each game still saved on server side ,but state is given from browser side which allows continuation of game 
+each game still saved on server side ,no its totally shifted to browser side now , state is given from browser side which allows continuation of game 
+
+Flask implementation: Flask stored the board in Python memory on your computer/server. Every click refreshed the entire page, requesting /set/<id>. If you opened the site in two separate tabs, both tabs shared the same single game because the server held the board.
+
+Vanilla JavaScript implementation: The server only acts as a simple file delivery system. 
+It gives you index.html and tictactoe.js once. 
+From that millisecond onward, Python/Flask is out of the loop. 
+The board lives inside the browser tab's volatile RAM.
 
 next we will be looking at vue implementation.
