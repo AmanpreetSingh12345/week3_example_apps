@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tic-Tac-Toe Component</title>
+        <style>
+            .board {
+                display: flex;
+                flex-wrap: wrap;
+                width: 156px;
+                margin-bottom: 20px;
+            }
+            .cell {
+                width: 48px;
+                height: 48px;
+                border: 1px solid black;
+                font-size: 32px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+            }
+            .board-top {
+                margin-bottom: 10px;
+            }
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <!-- Demonstrating reusability: rendering board components -->
+            <board></board>
+            <!-- Adding another <board></board> here creates an independent second game -->
+        </div>
+
+        <script src="./ttt-comp-vue.js"></script>
+    </body>
+</html>
